@@ -17,7 +17,8 @@ class ProductCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private let baseImageURL = "https://mobile-tha-server.firebaseapp.com"
+//    private let baseImageURL = "https://mobile-tha-server.firebaseapp.com"
+    let baseImageURL = NetworkManager.shared.baseURL
     
     // MARK: - Prepare for reuse
     

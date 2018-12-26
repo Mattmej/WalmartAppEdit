@@ -14,7 +14,8 @@ class NetworkManager {
     // MARK: - Properties
     
     private var numberOfProductsToRequestPerPage = 10
-    private let baseURL = "https://mobile-tha-server.firebaseapp.com/walmartproducts/"
+//    private let baseURL = "https://mobile-tha-server.firebaseapp.com/walmartproducts/"
+    let baseURL = "https://mobile-tha-server.firebaseapp.com/"
     private let session = URLSession.shared
     
     private init() { }
@@ -29,7 +30,7 @@ class NetworkManager {
     func getProducts(page: Int,
                      productCount: Int = NetworkManager.shared.numberOfProductsToRequestPerPage,
                      completion: @escaping (ProductContainer?)->()) {
-        let tempURL = baseURL + "\(page)/\(productCount)"
+        let tempURL = baseURL + "walmartproducts/" + "\(page)/\(productCount)"
         if let url = URL(string: tempURL) {
             let request = URLRequest(url: url)
             session.dataTask(with: request) {

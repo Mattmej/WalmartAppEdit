@@ -19,7 +19,8 @@ class ProductDetailsController: UIViewController {
     // MARK: - Properties
     
     var product: Product?
-    let baseImageURL = "https://mobile-tha-server.firebaseapp.com"
+//    let baseImageURL = "https://mobile-tha-server.firebaseapp.com"
+    let baseImageURL = NetworkManager.shared.baseURL
     
     // MARK: - Lifecycle Functions
     
